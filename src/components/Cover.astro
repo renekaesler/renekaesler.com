@@ -1,0 +1,120 @@
+<div class="cover" x-zstack>
+  <canvas id="binary-effect" class="fluid stretch">
+    <script>
+      // @ts-nocheck
+      import { createBinaryEffect } from "binary-effect";
+
+      const canvas = document.querySelector("#binary-effect");
+      const effect = await createBinaryEffect(canvas, {
+        imageSrc: "portrait.webp",
+        charactersSrc: "characters.png",
+        smoothness: 0.2,
+        characterScaling: 0.36,
+        duration: 4000,
+      });
+
+      effect.run();
+    </script>
+  </canvas>
+
+  <div class="overlay stretch" x-zstack>
+    <div class="cover-body container a-end" x-vstack>
+      <hgroup>
+        <p>Software Engineer</p>
+        <h1>Rene Kaesler</h1>
+      </hgroup>
+
+      <ul class="raw">
+        <li>Specialized in Web Technologies</li>
+        <li>Available as <strong>Freelancer</strong></li>
+        <li><strong>10+</strong> Years Experience</li>
+      </ul>
+
+      <div class="social-media" x-hstack>
+        <a
+          class="icon"
+          href="https://github.com/renekaesler"
+          aria-label="Github Profile"
+          style="--icon: url(/icons/github.svg)"></a>
+        <a
+          class="icon"
+          href="https://www.npmjs.com/~renekaesler"
+          aria-label="npm Profile"
+          style="--icon: url(/icons/npm.svg)"></a>
+        <a
+          class="icon"
+          href="https://www.xing.com/profile/Rene_Kaesler2"
+          aria-label="Xing Profile"
+          style="--icon: url(/icons/xing.svg)"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .cover {
+    container-type: inline-size;
+    height: 100%;
+  }
+
+  canvas {
+    z-index: -1;
+    height: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
+
+  .overlay {
+    background: linear-gradient(
+      to top,
+      var(--background),
+      color-mix(in srgb, var(--background) 10%, transparent) 75%
+    );
+  }
+
+  .cover-body {
+    padding-block: var(--space-xl);
+    gap: var(--space);
+  }
+
+  hgroup {
+    h1 {
+      font-size: clamp(2.7627rem, 0.9124rem + 9.2513cqi, 4.4973rem);
+    }
+
+    p {
+      font-size: clamp(1.1664rem, 0.7137rem + 2.2633cqi, 1.5908rem);
+    }
+  }
+
+  ul {
+    font-family: var(--font-accent);
+    list-style: "\2026";
+    padding-left: 1ch;
+
+    li {
+      font-size: clamp(0.875rem, 0.6083rem + 1.3333cqi, 1.125rem);
+    }
+
+    strong {
+      color: var(--primary);
+      font-size: larger;
+    }
+  }
+
+  .social-media {
+    align-self: stretch;
+    justify-content: space-evenly;
+
+    a {
+      display: inline-block;
+      color: white;
+      flex: 0 0 auto;
+      line-height: 0;
+      padding: 12px;
+      font-size: 24px;
+      margin-bottom: -12px;
+    }
+  }
+</style>

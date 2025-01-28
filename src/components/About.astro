@@ -1,0 +1,79 @@
+---
+import Technologies from "./Technologies.astro";
+---
+
+<section class="about container">
+  <div class="content">
+    <h2 class="text-center">Who <span class="text-primary">I Am</span></h2>
+
+    <p>
+      Hi! I’m a freelance software engineer with a focus on computer graphics
+      and web development. With an instinctive sense for design, I build
+      efficient &amp; scalable systems while simplifying complex problems.
+      Through my fascination with computer vision, a domain of artificial
+      intelligence, I stay up to date with cutting-edge technologies to help
+      clients overcome their technical hurdles.
+    </p>
+
+    <h3 class="icon" style="--icon: url(/icons/code.svg)">Web Development</h3>
+
+    <p>
+      The web has evolved into a robust platform capable of supporting even the
+      most complex applications. With modern technologies and frameworks, I
+      build scalable, high-performance web solutions that deliver powerful
+      functionality while ensuring a seamless user experience.
+    </p>
+
+    <h3 class="icon" style="--icon: url(/icons/sitemap.svg)">
+      Software Architecture
+    </h3>
+
+    <p>
+      In a fast-paced world, we tend to prioritize features over solid
+      architecture. I help you balance urgent needs with sustainable growth.
+      From there, we'll build a solid foundation for immediate success and
+      future scalability.
+    </p>
+
+    <h3 class="icon" style="--icon: url(/icons/users.svg)">Consulting</h3>
+
+    <p>
+      Navigating business challenges is easier with the right expertise. With
+      years of experience, I offer personalized support to help you make
+      informed decisions, avoid costly mistakes, and achieve your goals more
+      efficiently.
+    </p>
+  </div>
+
+  <div class="technologies">
+    <Technologies />
+  </div>
+
+  <div class="text-center">
+    <button class="mx-auto">Download CV</button>
+  </div>
+</section>
+
+<style>
+  .about {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  h3 {
+    --icon-color: var(--primary);
+
+    display: flex;
+    align-items: center;
+    column-gap: 1ch;
+  }
+
+  .technologies {
+    margin-block: var(--space-2xl);
+  }
+
+  button {
+    visibility: hidden;
+  }
+</style>

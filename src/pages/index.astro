@@ -1,0 +1,39 @@
+---
+import Cover from "../components/Cover.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+import About from "../components/About.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div class="minor">
+    <Cover />
+  </div>
+
+  <div class="major">
+    <About />
+    <Contact />
+    <Footer />
+  </div>
+</Layout>
+
+<style>
+  .minor {
+    height: 100svh;
+  }
+
+  @media (width > 840px) {
+    .minor {
+      position: fixed;
+      bottom: 0;
+      width: 38.2%;
+      height: 100lvh;
+      box-shadow: 0 0 30px #00000080;
+    }
+
+    .major {
+      padding-left: 38.2%;
+    }
+  }
+</style>

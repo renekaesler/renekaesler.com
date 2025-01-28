@@ -1,0 +1,84 @@
+<section class="contact container">
+  <h2 class="text-center">Get <span class="text-primary">In Touch</span></h2>
+
+  <x-tabs>
+    <menu class="raw" x-hstack>
+      <li class="active" data-qr="whatsapp-qr.png">Whatsapp</li>
+      <li data-qr="vcard-qr.png">vCard</li>
+    </menu>
+
+    <img src="whatsapp-qr.png" alt="QR Code " />
+  </x-tabs>
+
+  <ul class="raw">
+    <li x-vstack>
+      <span class="icon" style="--icon: url(/icons/envelope.svg)"></span>
+      <strong>Email</strong>
+      <small>renekaesler@gmail.com</small>
+    </li>
+
+    <li x-vstack>
+      <span class="icon" style="--icon: url(/icons/phone.svg)"></span>
+      <strong>Phone</strong>
+      <small>+49 15223052116</small>
+    </li>
+
+    <li x-vstack>
+      <span class="icon" style="--icon: url(/icons/location.svg)"></span>
+      <strong>Address</strong>
+      <small>Gebauerstrasse 15<br />01189 Dresden, Germany</small>
+    </li>
+  </ul>
+</section>
+
+<style>
+  .contact {
+    text-align: center;
+  }
+
+  x-tabs {
+    display: block;
+    width: min(80%, 350px);
+    margin-inline: auto;
+    margin-bottom: var(--space-2xl);
+
+    menu {
+      margin-bottom: 8px;
+      user-select: none;
+
+      li {
+        text-align: center;
+        flex: 1 0 auto;
+        margin: 0;
+        padding: 1em;
+        font-weight: bold;
+        cursor: pointer;
+
+        &.active {
+          border-bottom: 2px solid var(--primary);
+        }
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    gap: var(--space-l);
+    align-self: stretch;
+
+    .icon {
+      --icon-color: var(--primary);
+      font-size: var(--step-2);
+      margin-block-end: var(--space-xs);
+    }
+  }
+</style>

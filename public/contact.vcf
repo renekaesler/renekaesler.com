@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Rene Kaesler
+N:Kaesler;Rene;;;
+EMAIL;type=HOME,INTERNET:renekaesler@gmail.com
+TEL;TYPE=WORK,VOICE:+4915223052116
+ADR;TYPE=HOME:;;Gebauerstrasse 15;Dresden;;01189;Germany
+ORG:Software Engineer Rene Kaesler
+URL;type=WORK:https://renekaesler.com
+END:VCARD

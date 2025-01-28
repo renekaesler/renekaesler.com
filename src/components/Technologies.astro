@@ -1,0 +1,69 @@
+---
+const technologies = [
+  { icon: "git", name: "Git" },
+  { icon: "rubyonrails", name: "Ruby on Rails" },
+  { icon: "docker", name: "Docker" },
+  { icon: "nodejs", name: "Node.js" },
+  { icon: "vue", name: "Vue.js" },
+  { icon: "react", name: "React" },
+  { icon: "mongodb", name: "MongoDB" },
+  { icon: "webgl", name: "WebGL" },
+  { icon: "graphql", name: "GraphQL" },
+  { icon: "openid", name: "OpenID" },
+  { icon: "webcomponents", name: "Web Components" },
+  { icon: "mariadb", name: "MariaDB" },
+];
+---
+
+<figure class="raw">
+  <figcaption>Familiar Technologies</figcaption>
+  <div class="technologies">
+    {
+      technologies.map(({ icon, name }) => (
+        <div class="raw technology" x-vstack>
+          <img
+            width="32"
+            height="32"
+            src={`/icons/${icon}.svg`}
+            alt={`${name} Icon`}
+          />
+          <span class="text-center">{name}</span>
+        </div>
+      ))
+    }
+  </div>
+</figure>
+
+<style>
+  figcaption {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: var(--space-xl);
+  }
+
+  .technologies {
+    --grid-column-count: 4;
+    --grid-item--min-width: 80px;
+
+    /**
+   * Calculated values.
+   */
+    --gap-count: calc(var(--grid-column-count) - 1);
+    --total-gap-width: calc(var(--gap-count) * var(--space-s));
+    --grid-item--max-width: calc(
+      (100% - var(--total-gap-width)) / var(--grid-column-count)
+    );
+
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr)
+    );
+    grid-gap: var(--space-l) var(--space-s);
+  }
+
+  .technology {
+    font-size: smaller;
+    gap: var(--space-xs);
+  }
+</style>

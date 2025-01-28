@@ -1,0 +1,164 @@
+:root {
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-s: 0.75rem;
+  --space: 1rem;
+  --space-l: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+
+  --step--2: clamp(0.5276rem, 0.4902rem + 0.0935vw, 0.5627rem);
+  --step--1: clamp(0.7033rem, 0.6048rem + 0.2462vw, 0.7956rem);
+  --step-0: clamp(0.9375rem, 0.7375rem + 0.5vw, 1.125rem);
+  --step-1: clamp(1.2497rem, 0.8859rem + 0.9095vw, 1.5908rem);
+  --step-2: clamp(1.6658rem, 1.0434rem + 1.556vw, 2.2493rem);
+  --step-3: clamp(2.2206rem, 1.1966rem + 2.56vw, 3.1805rem);
+  --step-4: clamp(2.96rem, 1.3202rem + 4.0994vw, 4.4973rem);
+  --step-5: clamp(3.9457rem, 1.3713rem + 6.4359vw, 6.3592rem);
+
+  --background: #1c1e1f;
+  --primary: #f9a825;
+
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  --font-accent: var(--font-mono);
+  --font-basic: var(--font-sans);
+
+  font-family: var(--font-basic);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--step-0);
+  background: var(--background);
+  color: rgba(255, 255, 255, 0.72);
+}
+
+hgroup {
+  * {
+    margin: 0;
+  }
+
+  p {
+    color: var(--primary);
+    font-size: var(--step-1);
+    font-family: var(--font-accent);
+  }
+}
+
+li + li {
+  margin-top: var(--space-2xs);
+}
+
+h1 {
+  font-size: var(--step-4);
+}
+
+h2 {
+  font-size: var(--step-3);
+}
+
+h3 {
+  font-size: var(--step-2);
+}
+
+h4,
+h5,
+h6 {
+  font-size: var(--step-1);
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+  color: white;
+}
+
+button {
+  display: block;
+  color: var(--primary);
+  font-weight: bold;
+  background: none;
+  border: 1px solid var(--primary);
+  padding: 1em;
+  border-radius: 2em;
+}
+
+section {
+  margin-block: var(--space-2xl);
+}
+
+.container {
+  padding-inline: 5%;
+  margin-inline: auto;
+}
+
+[x-zstack] {
+  display: grid;
+  place-items: center;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+
+  > * {
+    grid-area: 1 / 1;
+  }
+}
+
+[x-hstack],
+[x-vstack] {
+  display: flex;
+  align-items: center;
+}
+
+[x-hstack] {
+  flex-direction: row;
+}
+
+[x-vstack] {
+  flex-direction: column;
+}
+
+.content {
+  max-width: 80ch;
+  margin-inline: auto;
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+:where(.raw) {
+  margin: initial;
+  padding: initial;
+  list-style: none;
+}
+
+.fluid {
+  width: 100%;
+  height: auto;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+
+    flex: 0 0 auto;
+
+    background-color: var(--icon-color, currentColor);
+    mask: var(--icon) no-repeat center;
+    mask-size: contain;
+  }
+}
