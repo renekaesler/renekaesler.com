@@ -73,11 +73,11 @@ ITEMS
   align-items: flex-start;
 }
 
-.j-items-start {
+.items-j-start {
   justify-items: start;
 }
 
-.a-items-start {
+.items-a-start {
   align-items: flex-start;
 }
 
@@ -88,11 +88,11 @@ ITEMS
   align-items: safe center;
 }
 
-.j-items-center {
+.items-j-center {
   justify-items: safe center;
 }
 
-.a-items-center {
+.items-a-center {
   align-items: safe center;
 }
 
@@ -103,11 +103,11 @@ ITEMS
   align-items: flex-end;
 }
 
-.j-items-end {
+.items-j-end {
   justify-items: end;
 }
 
-.a-items-end {
+.items-a-end {
   align-items: flex-end;
 }
 
@@ -118,11 +118,11 @@ ITEMS
   align-items: stretch;
 }
 
-.j-items-stretch {
+.items-j-stretch {
   justify-items: stretch;
 }
 
-.a-items-stretch {
+.items-a-stretch {
   align-items: stretch;
 }
 
@@ -137,11 +137,11 @@ CONTENT
   align-content: flex-start;
 }
 
-.j-content-start {
+.content-j-start {
   justify-content: start;
 }
 
-.a-content-start {
+.content-a-start {
   align-content: flex-start;
 }
 
@@ -152,11 +152,11 @@ CONTENT
   align-content: safe center;
 }
 
-.j-content-center {
+.content-j-center {
   justify-content: safe center;
 }
 
-.a-content-center {
+.content-a-center {
   align-content: safe center;
 }
 
@@ -167,11 +167,11 @@ CONTENT
   align-content: flex-end;
 }
 
-.j-content-end {
+.content-j-end {
   justify-content: end;
 }
 
-.a-content-end {
+.content-a-end {
   align-content: flex-end;
 }
 
@@ -182,11 +182,11 @@ CONTENT
   align-content: stretch;
 }
 
-.j-content-stretch {
+.content-j-stretch {
   justify-content: stretch;
 }
 
-.a-content-stretch {
+.content-a-stretch {
   align-content: stretch;
 }
 
@@ -197,11 +197,11 @@ CONTENT
   align-content: space-between;
 }
 
-.j-content-between {
+.content-j-between {
   justify-content: space-between;
 }
 
-.a-content-between {
+.content-a-between {
   align-content: space-between;
 }
 
@@ -212,11 +212,11 @@ CONTENT
   align-content: space-around;
 }
 
-.j-content-around {
+.content-j-around {
   justify-content: space-around;
 }
 
-.a-content-around {
+.content-a-around {
   align-content: space-around;
 }
 
@@ -227,11 +227,11 @@ CONTENT
   align-content: space-evenly;
 }
 
-.j-content-evenly {
+.content-j-evenly {
   justify-content: space-evenly;
 }
 
-.a-content-evenly {
+.content-a-evenly {
   align-content: space-evenly;
 }
 
@@ -252,7 +252,7 @@ TEXT
 }
 
 /*
-Margin
+MARGIN
 */
 
 .mx-auto {
